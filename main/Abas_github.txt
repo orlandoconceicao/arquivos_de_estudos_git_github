@@ -1,0 +1,52 @@
+                                EXPLICAÇÃO RESUMIDA DAS ABAS DO GITHUB
+- Aba code 
+        - Ver arquivos da master 
+        - Ver tags, branchs arquivos
+
+- Aba issues 
+        - Mandar mensagem para comunicar erros e afins 
+        - Criar labels, marcar quem vai resolver
+
+- Aba pull request 
+        - Mandar codigo para analise 
+        - Analisar códigos para não ir bagunçado na master
+
+- Aba actions 
+        - Criar automatizações de deploy com integração de outros projetos incluindo CI/CD
+        - Podendo criar rotinas de atualização automática da master e outros processos
+
+- Aba projects 
+        - Pode-se criar um projeto e utilizar um quadro de tarefas
+        - Estruturas interessantes: backlog, Retorno de qualidade, desenvolvimento, teste, finalizadas
+        - Criar colunas com esses nomes, que serão as etapas do software. 
+        - Voltar no issues para moldar melhor
+        - também podendo usar o "trello " para organizar tarefas
+
+- Aba wiki 
+        - Pode-se criar uma documentação mais extensa para o projeto
+        - Como desenvolver funcionalidade, solucionar bugs 
+        - Ideia que seja um repo de conhecimento sobre o projeto
+        - Marcar bugs com esses pages, para alguém resolver ou você mesmo
+
+- Aba insights 
+        - Colocar informações detalhadas do projeto como
+        - Quem são os contribuidores, commits, forks, e mais
+        - interessante para ver o seu progresso
+
+- Aba settings 
+        - Onde tem diversas configurações dos projetos
+        - Aba onde adiciona colaboradores
+        - também pode mudar o nome do repo ou remover, adicionar features
+
+------------------------------------------------------------------------------------------------------------
+
+                                UM POUCO MAIS DE GITHUB
+
+- Gist => são pequenos blocos de código que podem ser ospedados no github
+        - Você pode armazenar uma solução que achou importante e não quer perder 
+        - Podendo achar na internet ou fazer um e compartilhar para ajudar alguém
+        - Para criar um gist botão de mais na esquerda em cima e ir em newu gist
+
+- Encontrar repósitorios interessantes no github para você usar para estudar
+        - Clonar código-fonte para usar como base
+        - Podendo dar star nos que gostou e fork nos que deseja continuar em um repo próprio

@@ -1,0 +1,234 @@
+                                Sequencias fundamentais:
+
+- abrir github 
+- ir em repositories 
+- new em verde 
+- colocar nome e observação 
+- fazer oque o github manda
+-------------------------------------------------------------------------------------------------
+
+- comando que o git manda fazer para criar repósitorio + conectar com github. coloca um de cada vez
+    - git init
+    - git status
+    - git add .
+    - git commit -m "primeiro commit"
+    - git branch -M main
+    - git remote add origin https://github.com/SEU_USUARIO/NOME_DO_REPO.git
+    - git push -u origin main
+-------------------------------------------------------------------------------------------------
+
+                                letras e seus comandos
+- -a => todos
+- -m => mensagem
+- -d => delete
+- -b => criar 
+- -f => forçar
+-------------------------------------------------------------------------------------------------
+
+                                Comandos diferentes:
+
+- selecionar pasta                 | cd  .\arquivo\
+
+- limpar terminal                  | clear
+
+- atualizar master => git branch => git pull => git merge origin/nome do branch => git push
+
+-------------------------------------------------------------------------------------------------
+
+- pegar ultima atualização da main 
+    | git checkout master => git pull        
+        | fazer sempre que for começar a trabalhar  
+            | depois dar checkout -b "mensagem" para mudar e criar um branch
+                | depois que termian a tarefa da um commit depois pull
+                    | depois copia o comando que elo da para ficar no remoto/github
+-------------------------------------------------------------------------------------------------
+
+- enviar alterações
+    | git status para ver
+        |git add . adicionar tudo
+            |git status
+                |git commit -a -m
+                    |git push
+-------------------------------------------------------------------------------------------------
+
+- trabalhar remotamente com outro dev => falar que o outro dev ja pode baixar a master
+    |git fetch -a puxar arquivos do repo
+        |git checkout em nova_tarefa
+            |git branch ver branchs
+                |git commit -a -m salvar 
+                    |git push
+-------------------------------------------------------------------------------------------------
+
+- atualizar submodulo 
+    |git add . adicionar tudo 
+        |git commit -a -m salvar no repositorio 
+            |  git push --recurse-submodule=on-demand push diferente para o submodule
+-------------------------------------------------------------------------------------------------
+
+comandos da area administrativa:
+
+- limpar arquivos untraked         | git clean -f(-f força apagar)          | dar git add (nome) e commit em arquivos importantes antes de dar clean                                                    untraked => arquivos que nao foi usadados git add .
+
+- limpar arquivos desnecessarios   | git gc
+
+- verificar corrupções em arquivos | git fsck
+
+- mapear todos passos d repositorio| git reflog                             | fica salvo em ate 30 dias
+
+- passar repositorio via arquivo   | git archive --format zip -output (nome, pasta a gerar) master
+-------------------------------------------------------------------------------------------------
+
+- mudar/criar de branchs dentro da master para depois mandar para master
+    - git checkout -b "nome branch" mudar e criar branch
+        - git branch para verificar em que branch esta
+            - git status para ver detalhes se ta salva e etc.
+                - git add . para adicionar tudo tudo
+                    - git commit -a -m "para salvar tudo"
+                        - git push para enviar ao repositório
+                            - copiar codigo que aparecer e colar no comando/
+
+-------------------------------------------------------------------------------------------------
+
+Comandos em geral:
+
+- adicionar git no vscode\terminal | git init
+
+- adicionar arquivos específicos   | git add (arquivo) (pasta\arquivo)
+
+- adicionar todos arquivos         | git add .                              |Mesmo dentro de pasta
+
+- salvar todas mudanças            | git commit -a -m "mensagem"
+
+- salvar mudanças epecíficas       | git commit (arquivo) -m "mensagem"
+
+- verificar informações            | git status                             |Usar frequentemente para nao perder nada
+
+- enviar arquivos para o repos     | git push                               
+
+- abaixa e mescla e salva o branch | git pull                               |usar frequentemente para ver si nao ha nada novo  | Pega atualizações tbm
+
+- clonar repositórios              | git clone (url) ./nome da pasta        |ir no repositório ir em code/copiar url
+
+- remover arquivo                  | git rm (arquivo)
+
+- puxar histórico de atualizações  | git log                                |mostra quem, data e hora                           
+
+- mover para outra pasta           | git mv (1arquivo) (pasta/1arquivo)      
+
+- renomear arquivo                 | git mv (errado) (certo)
+
+- retornar ao arquivo original     | git checkout (arquivo)                 |usar com atenção
+
+- mudar de branch                  | git checkout (arquivo)
+
+- ignorar arquivos como APIs       | .gitignore                             |criar arquivo colocar arquivos desnecessarios dentro dele depois criar arquivos desnecessarios, obdecer sequencia. si for colocar pasta coloca /* na frente do nome da pasta
+
+- desfazer todas alterações        | git reset --hard origin/main           |reseta ate o ultimo git push | usar com atenção
+
+- ir e voltar com reflog           | git reset --hard b7724cb  
+
+- criar ramificação do codigo fonte| git branch (nome)
+
+- deletar um branch                | git branch -d ou --delete (nome)       |pouco usado
+
+- mudar e criar branch             | git checkout -b (arquivo)              |usado para dispensar mudanças de um arquivo
+
+- git checkout master/main       =>| git pull Depois criar outro branch     |sempre commitar para nao trazer erros 
+
+- unir branches na master/main     | git merge (arquivo)                    |dar check na master => dar merge na pasta => e check em outra
+
+- ir para a atualização da master  | git merge master                       |normaçmente alguem coloca o branch na master
+
+- salvar modificações atuais       | git stash
+
+- verificcar stash criadas         | git stash list
+
+- recuperar stash no branch        | git stash apply (numero stash)
+
+- ver tudo de qualquer stash atuliz| git stash show -p (numero stash)
+
+- remover todas stach do bran atual| git stash clear
+
+- remover stash epecifica          | git stash drop (numero da stash)
+
+- marcar stash dar nome e mensagem | git tag -a (marcador-nome) -m "mensagem"
+
+- ver tags criadas                 | git tag                                | colocar tag depois de commitar
+
+- ver detalhes de branches e tags  | gi show
+
+- verificar tags                   | git show (nome dado na tag -a)
+
+- trocar de tag                    | git checkout (nome da tag -a)
+
+- enviar a tag ao repositório      | git push origin (nome da tag)
+
+- enviar toas tags ao repositório  | git push origin --tags
+
+- puxar todos que esta no github   | git fetch -a 
+
+- ver as origin                    | git remote -v
+
+- remover origin                   | git remote rm origin => confirma com git remote -v
+
+- adicionar origin                 | git remote add origin (url da origin)   |depois disso ja pode usar o pull e fazer o trabalho
+
+- juntar repositorios em um so     | git submodule add (link do repo) (name da pasta que ele vai)
+
+- ver diferença de branches da main| git diff
+
+- ver diferença de dois branchs    | git diff (arquivo) (arquivo_b)
+
+- ver tudo resumido do projeto/repo| git shortlog
+
+- excluir commit aula 71 minuti 8  | git 
+
+-------------------------------------------------------------------------------------------------
+
+                    CORRIGINDO ALGUNS ERROS / PASTA FICA RISCADA
+
+git pull origin main --rebase => usa esse se dar push e resolver ja esta otimo depois da add.
+
+- Verificar status e ver a pasta riscada (não rastreada)
+    git status
+
+- Adicionar a pasta riscada (ou todos os arquivos novos)
+    git add .
+
+- Fazer commit das alterações
+    git commit -m "Adiciona pasta com código e organiza arquivos"
+
+- Puxar as alterações do GitHub antes de enviar (evita rejeição)
+    git pull origin main --rebase
+
+-Resolver conflitos se aparecerem (abrir os arquivos conflitantes, salvar)
+-Depois de resolver conflitos, continuar o rebase:
+    git add .
+    git rebase --continue
+
+- Enviar tudo para o GitHub
+    git push origin main
+
+                SEMPRE ABRE O TERMINAL NA PASTA E NAO NO VS CODE
+git pull origin main --rebase
+git add .
+git commit -m "Mensagem do commit"
+git push origin main
+
+                PASSOS PARA VOLTAR A SUBIR TUDO AO GITHUB
+
+cd caminho/para/seu/projeto
+git init
+git remote add origin URL_DO_REPOSITORIO
+git remote set-url origin URL_DO_REPOSITORIO
+git status
+git add .
+git commit -m "Mensagem do commit"
+git push origin main
+git push origin master
+git pull origin main
+git pull origin master
+
+- Si trocou o nome do repositorio e não esta masi conectado 
+    git remote -v
+    git remote set-url origin <SUA_NOVA_URL>

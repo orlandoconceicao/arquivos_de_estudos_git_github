@@ -1,0 +1,17 @@
+                            CRIAR PORTIFÓLIO GITHUB
+
+- Crie o nome do repósitorio com 
+    - nomede usuario.github.io
+    - esse vai ser o dominio da página
+
+- comando que o git manda fazer para criar repósitorio + conectar com github. coloca um de cada vez
+    - git init
+    - git status
+    - git add .
+    - git commit -m "primeiro commit"
+    - git branch -M main
+    - git remote add origin https://github.com/SEU_USUARIO/NOME_DO_REPO.git
+    - git push -u origin main
+
+- Depois cria o portifólio com HTML e CSS e se quiser javascript
+- E se não souber cola um do git hub e muda as informações
