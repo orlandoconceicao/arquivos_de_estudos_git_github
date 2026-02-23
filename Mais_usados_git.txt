@@ -229,6 +229,71 @@ git push origin master
 git pull origin main
 git pull origin master
 
-- Si trocou o nome do repositorio e não esta masi conectado 
+- Si trocou o nome do repositorio e não esta mais conectado 
     git remote -v
     git remote set-url origin <SUA_NOVA_URL>
+
+============================================================
+GUIA — TROCAR MASTER POR MAIN (GIT PROFISSIONAL)
+============================================================
+
+OBJETIVO:
+- Transformar a branch master em main
+- Excluir a main antiga
+- Deixar apenas uma branch chamada main
+- Manter os arquivos da master
+
+------------------------------------------------------------
+CENÁRIO INICIAL
+------------------------------------------------------------
+
+Você tem:
+
+main    -> branch antiga
+master  -> branch com os arquivos corretos
+
+Quer ficar com:
+
+main    -> (antiga master)
+master  -> excluída
+
+------------------------------------------------------------
+PASSO A PASSO DEFINITIVO
+------------------------------------------------------------
+
+1) Vá para a master:
+git checkout master
+
+
+2) Apague a main antiga localmente:
+git branch -D main
+
+
+3) Renomeie a master para main:
+git branch -m main
+
+
+Agora sua branch atual (que era master) virou main.
+
+
+4) Envie para o GitHub forçando atualização:
+git push -f origin main
+
+5) Apague a master do GitHub:
+git push origin --delete master
+
+
+------------------------------------------------------------
+COMANDOS RESUMIDOS (EXECUTAR EM SEQUÊNCIA)
+------------------------------------------------------------
+
+git checkout master
+git branch -D main
+git branch -m main
+git push -f origin main
+git push origin --delete master
+
+
+
+
+
